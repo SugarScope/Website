@@ -1,0 +1,1406 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 13 2025 18:37:29 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="681e28248afa9f048c16624c" data-wf-site="681d249aaf15c0818bb90f1e" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Buttons</title>
+  <meta content="Buttons" property="og:title">
+  <meta content="Buttons" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/sugar-scope-3.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Afacad Flux:200,300,regular,500,600,700,800,900","Archivo Black:regular"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="page-background">
+    <div class="bg-blur _1">
+      <div class="bg-blur inner _1"></div>
+    </div>
+  </div>
+  <div class="page-content">
+    <nav class="nav">
+      <div class="w-embed">
+        <style>
+.nav {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.animate-this-shit span {
+	display: inline-block;
+  opacity: 0%;
+}
+:root {
+	--dark-blue: #051328;
+}
+.content-item {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	counter-increment: itemcounter;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	/* pointer-events: none; */
+}
+.content-item::before {
+	color: white;
+	position: absolute;
+	top: 0;
+  font-size: 14px;
+  line-height: 14px;
+	background-color: black;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  border-radius: 50%;
+	content: counters(itemcounter, ".", decimal-leading-zero);
+}
+.nav-item-link::before,
+.nav-item-link::after,
+.footer-bottom-link::before,
+.footer-bottom-link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+.footer-bottom-link::before,
+.nav-item-link::before {
+    content: '';
+    /* show by default */
+}
+.footer-bottom-link:hover span,
+.nav-item-link:hover span {
+    animation: glitchText 0.4s linear;
+}
+@keyframes glitchText {
+    0% {
+        opacity: 1;
+        transform: translate3d(-10px, 0, 0) scale3d(-1, -1, 1);
+        -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    }
+    10% {
+        -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+        clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    }
+    20% {
+        -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+        clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    }
+    35% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    }
+    50% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    }
+    60% {
+        -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }
+    70% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    }
+    80% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    }
+    90% {
+        transform: translate3d(-10px, 0, 0) scale3d(-1, -1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+.footer-bottom-link::before,
+.nav-item-link::before {
+    height: 2px;
+    opacity: 0;
+}
+.footer-bottom-link:hover::before,
+.nav-item-link:hover::before {
+    opacity: 1;
+    animation: glitchLine 0.4s steps(2, start) forwards;
+}
+@keyframes glitchLine {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    10% {
+        transform: translate3d(10px, 0, 0);
+    }
+    20% {
+        transform: translate3d(0, 4px, 0);
+    }
+    30% {
+        transform: scale3d(0.1, 1.4, 1) translate3d(0, -25px, 0);
+        transform-origin: 100% 0%;
+    }
+    40% {
+        transform: scale3d(1, 0.3, 1) translate3d(0, 25px, 0);
+    }
+    50% {
+        transform: scale3d(0.5, 0.3, 1) translate3d(-100px, -80px, 0);
+    }
+    60% {
+        transform: scale3d(1, 1.25, 1) translate3d(10px, -5px, 0);
+    }
+    70% {
+        transform: scale3d(0.5, 0.5, 1) translate3d(0, 20px, 0);
+    }
+    80% {
+        transform: translate3d(-30, 10px, 0) scale3d(1, 0.4, 1);
+        transform-origin: 100% 0%;
+    }
+    90% {
+        transform: scale3d(1, 0.5, 1) translate3d(0, -15px, 0);
+        ;
+        transform-origin: 0% 50%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotateIt {
+  -webkit-animation: rotating 20s linear infinite;
+  -moz-animation: rotating 20s linear infinite;
+  -ms-animation: rotating 20s linear infinite;
+  -o-animation: rotating 20s linear infinite;
+  animation: rotating 20s linear infinite;
+}
+.wlfwc-holder .wf {
+	position: absolute;
+	z-index: 2;
+	width: 40px;
+	height: 40px;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+  fill: currentColor;
+}
+.footer h2 .db {
+	position: relative;
+  z-index: 1;
+}
+.footer h2 .db::before {
+  content:"";
+  display: block;
+	position: absolute;
+  top: -100%;
+  left: calc(50% - 100px);
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+	background-image: url('https://uploads-ssl.webflow.com/6047999733515e4a9e0e1cc3/604900abca9dde39cf8ec086_notyourbusiness.gif');
+	background-size: cover;
+  background-position: 50% 50%;
+	pointer-events: none;
+  opacity: 0%;
+  transition: 200ms all ease;
+}
+.footer h2 .db:hover::before {
+	opacity: 100%;
+}
+.btn.submit {
+	-webkit-clip-path: circle(40% at 50% 50%);
+	clip-path: circle(40% at 50% 50%);
+}
+.submit-wrapper:hover .btn.submit {
+	color: blue;
+}
+.submit:focus-visible {
+	background: #443ffc;
+}
+.btn.submit .textcircle {
+	position: relative;
+	display: block;
+	width: 200px;
+}
+.btn.submit .textcircle text {
+	font-size: 32px;
+	text-transform: uppercase;
+	fill: currentColor;
+}
+.btn.submit .textcircle textPath {
+	letter-spacing: 17px; /* Firefox needs this */
+}
+.submit-wrapper:hover .btn.submit .textcircle {
+	animation: rotateIt 7s linear infinite;
+  fill: currentColor;
+}
+.btn.submit .rocket {
+	position: absolute;
+	z-index: 2;
+	width: 40px;
+	height: 40px;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+  fill: currentColor;
+}
+.submit-wrapper:hover .btn.submit .rocket {
+  fill: currentColor;
+}
+@keyframes rotateIt {
+  to {
+	transform: rotate(-360deg);
+  }
+}
+.heart {
+  animation: heartbeat 3s infinite;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale( .75 );
+  }
+  20% {
+    transform: scale( 1 );
+  }
+  40% {
+    transform: scale( .75 );
+  }
+  60% {
+    transform: scale( 1 );
+  }
+  80% {
+    transform: scale( .75 );
+  }
+  100% {
+    transform: scale( .75 );
+  }
+}
+</style>
+      </div>
+      <div class="noiser w-embed"><canvas id="noise" class="noise"></canvas></div>
+      <div class="container-4 is--nav">
+        <a href="https://www.vibranddesign.com/" target="_blank" class="nav-logo-link w-inline-block">
+          <div class="logo-embed w-embed"><svg width="100%" height="100%" viewbox="0 0 801 246" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;">
+              <g>
+                <path d="M233.302,76.651C233.302,68.916 230.23,61.5 224.761,56.03C212.939,44.208 191.447,22.716 177.272,8.543C168.841,0.11 156.125,-2.339 145.164,2.359C113.586,15.893 48.92,43.607 17.675,56.997C6.953,61.592 0,72.136 0,83.801L0,169.143C0,176.878 3.073,184.294 8.541,189.764C20.364,201.586 41.856,223.078 56.03,237.251C64.462,245.684 77.178,248.133 88.138,243.435C119.717,229.901 184.382,202.189 215.627,188.797C226.35,184.202 233.302,173.658 233.302,161.993L233.302,76.651ZM642.372,190.773C648.567,190.866 654.728,191.846 660.559,193.903C660.559,193.903 661.163,194.154 661.027,194.819L659.669,199.422C659.208,200.629 658.063,199.727 656.97,199.424C649.923,197.524 642.429,195.681 635.891,197.939C630.218,199.899 626.541,208.854 635.501,212.099C643.079,214.844 652.161,214.532 658.342,219.789C663.639,224.295 663.894,232.442 660.474,237.857C653.702,248.579 635.61,247.091 621.15,241.291C621.15,241.291 620.58,241.032 620.71,240.392L622.146,235.408C622.481,234.531 622.426,234.649 624.443,235.44C632.531,238.508 641.466,240.834 649.231,238.281C655.577,236.197 659.013,226.519 649.706,222.74C646.345,221.375 642.746,220.757 639.184,220.036C637.179,219.63 628.312,217.665 625.224,213.773C621.073,208.54 622.435,200.091 627.196,195.655C631.172,191.949 636.9,190.747 642.372,190.773ZM743.147,215.047C743.609,215.237 743.629,215.309 743.664,215.756L743.664,239.694C743.6,240.458 742.515,240.683 741.719,241.013C730.284,245.685 717.051,248.054 706.059,242.813C690.628,235.457 685.903,210.39 699.936,197.676C709.553,188.964 724.911,189.187 738.23,193.138C738.23,193.138 738.833,193.352 738.747,194.011L737.69,198.915C737.316,200.159 736.118,199.318 735.014,199.061C724.567,196.697 712.608,195.292 704.621,202.925C695.423,211.714 696.722,229.501 708.087,236.186C716.644,241.22 727.777,239.167 736.982,235.944L737.044,221.478L717.247,221.478C716.655,221.431 716.543,221.284 716.5,220.731L716.5,215.756C716.547,215.165 716.694,215.054 717.247,215.01L742.917,215.01C743.034,215.019 743.034,215.019 743.147,215.047ZM537.008,191.01C546.842,191.143 556.905,195.649 561.526,204.681C569.978,221.203 559.653,244.781 537.673,245.1C531.543,245.13 525.415,244.895 519.293,244.572C519.293,244.572 518.578,244.472 518.525,243.762L518.525,192.423C518.572,191.798 518.718,191.684 519.298,191.612C525.199,191.337 531.119,190.984 537.008,191.01ZM680.091,244.508L674.739,244.508C674.148,244.461 674.036,244.314 673.993,243.762L673.993,192.424C674.039,191.832 674.186,191.72 674.739,191.677C676.562,191.677 678.39,191.543 680.208,191.686C680.737,191.814 680.798,191.922 680.838,192.424L680.838,243.762C680.791,244.353 680.644,244.465 680.091,244.508ZM611.224,244.508L575.517,244.508C574.925,244.461 574.813,244.314 574.77,243.762L574.77,192.424C574.817,191.832 574.964,191.762 575.517,191.719L611.34,191.719C611.87,191.845 611.931,191.921 611.97,192.424L611.97,197.322C611.924,197.913 611.777,198.025 611.224,198.068L581.615,198.068L581.615,214.859L608.052,214.859C608.643,214.906 608.755,215.053 608.799,215.606L608.799,220.58C608.752,221.171 608.605,221.283 608.052,221.326L581.615,221.326L581.615,238.116L611.224,238.116C611.815,238.162 611.927,238.31 611.97,238.863L611.97,243.762C611.924,244.353 611.777,244.465 611.224,244.508ZM760.738,244.508L755.386,244.508C754.795,244.461 754.683,244.314 754.639,243.762L754.639,192.424C754.686,191.832 754.833,191.72 755.386,191.677C757.157,191.677 758.933,191.551 760.699,191.685C760.888,191.73 761.045,191.822 761.175,191.964L793.151,232.983L793.16,192.307C793.287,191.777 793.396,191.717 793.897,191.677L799.248,191.677C799.839,191.724 799.951,191.871 799.995,192.424L799.995,243.762C799.948,244.353 799.801,244.465 799.248,244.508L793.821,244.508C793.425,244.478 793.372,244.375 793.232,244.22L761.484,203.36L761.475,243.878C761.348,244.408 761.24,244.468 760.738,244.508ZM535.523,197.609C532.238,197.64 528.954,197.732 525.672,197.865L525.499,238.307C536.267,238.664 548.01,239.194 553.886,230.076C560.63,219.611 556.878,202.815 544.308,198.727C541.478,197.808 538.495,197.598 535.523,197.609ZM189.44,77.187C189.44,73.915 188.14,70.776 185.827,68.461C183.512,66.148 180.374,64.848 177.101,64.848L177.093,64.848C173.821,64.848 170.683,66.148 168.369,68.461C166.054,70.776 164.755,73.915 164.755,77.187L164.755,169.16C164.755,172.432 166.054,175.571 168.369,177.884C170.683,180.199 173.821,181.498 177.093,181.498L177.101,181.498C180.374,181.498 183.512,180.199 185.827,177.884C188.14,175.571 189.44,172.432 189.44,169.16L189.44,77.187ZM98.273,181.223C104.052,181.223 109.272,177.774 111.538,172.459C119.597,153.564 138.753,108.644 149.637,83.124C151.392,79.008 150.964,74.286 148.498,70.552C146.031,66.818 141.855,64.572 137.38,64.572L137.374,64.572C132.564,64.572 128.234,67.488 126.425,71.948C118.163,92.333 95.62,147.943 95.62,147.943C95.62,147.943 73.686,92.71 65.524,72.156C63.706,67.577 59.278,64.572 54.351,64.572L54.346,64.572C49.842,64.572 45.64,66.834 43.16,70.593C40.68,74.351 40.254,79.105 42.026,83.245C52.959,108.792 72.143,153.62 80.212,172.475C82.483,177.782 87.698,181.223 93.47,181.223L98.273,181.223ZM739.144,64.562C732.388,64.562 723.195,64.834 711.634,65.373C704.147,65.711 698.227,71.892 698.227,79.407L698.227,166.489C698.227,173.969 704.077,180.14 711.564,180.52C721.28,180.983 731.587,181.213 742.522,181.213C759.063,181.213 772.783,175.871 783.613,165.016C794.478,154.155 799.98,139.944 799.98,122.386C799.98,105.166 794.304,91.118 782.952,80.595C771.739,69.907 757.043,64.562 739.144,64.562ZM314.975,121.734C327.686,118.227 335.695,108.031 335.695,95.15C335.695,75.764 321,64.91 294.917,64.91C285.515,64.91 274.197,65.098 261.034,65.404C253.408,65.575 247.313,71.815 247.313,79.448L247.313,166.033C247.313,173.551 253.199,179.736 260.72,180.066C273.431,180.617 285.654,180.892 297.424,180.892C324.691,180.892 340.71,169.038 340.71,148.144C340.71,135.263 330.855,124.907 314.975,121.734ZM399.966,144.941C399.966,144.941 414.94,167.203 420.93,176.101C422.462,178.357 425.004,179.708 427.72,179.708C432.491,179.708 436.879,177.044 439.073,172.799C441.267,168.554 440.919,163.442 438.167,159.539C430.959,149.342 423.681,139.097 423.681,139.097C437.053,131.917 445.062,119.551 445.062,104.668C445.062,79.424 427.198,65.063 398.608,65.063C390.181,65.063 380.152,65.241 368.451,65.6C360.86,65.823 354.835,72.045 354.835,79.64L354.835,167.687C354.835,174.328 360.198,179.708 366.849,179.708C370.053,179.708 373.117,178.441 375.346,176.188C377.61,173.935 378.898,170.877 378.898,167.687L378.898,144.941L399.966,144.941ZM684.238,78.171C684.238,74.96 682.95,71.882 680.686,69.611C678.423,67.341 675.323,66.066 672.12,66.066C668.916,66.066 665.851,67.341 663.553,69.611C661.29,71.882 660.036,74.96 660.036,78.171L660.036,139.265C660.036,139.265 619.571,88.231 606.234,71.391C603.552,68.027 599.478,66.066 595.195,66.066L594.011,66.066C590.285,66.066 586.698,67.546 584.051,70.182C581.44,72.815 579.942,76.391 579.942,80.117L579.942,167.687C579.942,170.877 581.231,173.935 583.459,176.188C585.723,178.441 588.787,179.708 591.991,179.708C595.16,179.708 598.225,178.441 600.488,176.188C602.752,173.935 604.005,170.877 604.005,167.687L604.005,107.179C604.005,107.179 644.017,157.655 657.32,174.391C659.966,177.751 664.006,179.708 668.324,179.708L670.17,179.708C677.935,179.708 684.238,173.419 684.238,165.661L684.238,78.171ZM483.445,158.785L536.933,158.785C536.933,158.785 540.59,167.122 543.306,173.261C545.012,177.161 548.878,179.679 553.126,179.679C557.479,179.679 561.518,177.485 563.852,173.85C566.22,170.214 566.568,165.635 564.792,161.682C553.509,136.575 533.52,92.05 525.267,73.667C523.004,68.618 517.989,65.369 512.452,65.369L508.239,65.369C502.702,65.369 497.722,68.604 495.424,73.636C487.136,91.98 467.043,136.463 455.69,161.599C453.914,165.562 454.228,170.165 456.596,173.818C458.964,177.471 463.003,179.679 467.356,179.679C471.744,179.679 475.714,177.06 477.42,173.024C479.997,166.909 483.445,158.785 483.445,158.785ZM294.429,160.019C290.251,160.019 282.555,159.852 271.342,159.35L271.342,132.752L298.26,132.752C309.821,132.752 316.995,137.436 316.995,145.633C316.995,155.168 309.473,160.019 294.429,160.019ZM742.661,159.17C735.801,159.17 728.976,159.002 722.289,158.668L722.289,87.106C728.14,86.772 733.955,86.605 739.492,86.605C749.87,86.605 758.401,89.948 764.913,96.47C771.425,102.989 774.768,111.685 774.768,122.386C774.768,133.254 771.599,142.117 765.401,148.97C759.202,155.826 751.68,159.17 742.661,159.17ZM510.189,96.124L527.914,137.411L492.464,137.411L510.189,96.124ZM378.898,123.901L378.898,86.772C383.39,86.605 390.076,86.605 398.956,86.605C412.99,86.605 421.348,92.459 421.348,104.668C421.348,116.041 412.677,123.901 400.628,123.901L378.898,123.901ZM292.096,85.616C306.304,85.616 312.99,89.464 312.99,98.831C312.99,107.53 305.782,113.216 294.917,113.216L271.342,113.216L271.342,85.783L281.893,85.783C286.559,85.616 289.902,85.616 292.096,85.616Z"></path>
+              </g>
+            </svg></div>
+        </a>
+        <ul role="list" class="nav-item-list is--main-nav w-list-unstyled">
+          <li>
+            <a href="https://webflow.com/website/vibrand-css-button-hover-styles?s=vibrand-css-button-hover-styles" class="nav-item-link w-inline-block">
+              <div><span>Clone This Project</span></div>
+              <div class="nav-link-icon w-embed"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+                  <path fill="currentColor" d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
+                </svg></div>
+            </a>
+          </li>
+          <li>
+            <a href="https://preview.webflow.com/preview/vibrand-css-button-hover-styles?utm_medium=preview_link&amp;utm_source=designer&amp;utm_content=vibrand-css-button-hover-styles&amp;preview=758e81375414bc258a4cf735e3eb0788&amp;mode=preview" target="_blank" class="nav-item-link w-inline-block">
+              <div><span>Preview Mode</span></div>
+              <div class="nav-link-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 213 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                  <g transform="matrix(1,0,0,1,-103.2,-131.1)">
+                    <path d="M261,174.3C261,174.3 243.7,228.5 242.4,233.1C241.9,228.5 229.3,131.1 229.3,131.1C199.8,131.1 184.1,152 175.8,174.3C175.8,174.3 154.8,228.7 153.1,233.3C153,229 149.9,174.9 149.9,174.9C148.1,147.7 123.3,131.2 103.2,131.2L127.4,278.8C158.3,278.7 174.9,257.8 183.6,235.6C183.6,235.6 202.1,187.6 202.9,185.4C203.1,187.5 216.2,278.8 216.2,278.8C247.1,278.8 263.8,259.2 272.8,237.8L316,131.1C285.4,131.1 269.3,152 261,174.3Z" style="fill:currentColor;fill-rule:nonzero;"></path>
+                  </g>
+                </svg></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div style="height:0px;opacity:0" class="nav-topic-wrap">
+        <div class="container-4 is--nav-topic-info">
+          <p style="opacity:0" class="nav-topic-p">20 CSS Button Hover Styles</p>
+        </div>
+      </div>
+    </nav>
+    <div data-w-id="f165aba5-346e-306b-f133-529de685a1a1" class="hero">
+      <div class="container-4 is--hero">
+        <div class="wlfwc-holder">
+          <div class="html-embed w-embed"><svg class="textcircle rotateIt" viewbox="0 0 500 500">
+              <title>With Love for the Webflow Community</title>
+              <defs>
+                <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
+              </defs>
+              <text>
+                <textpath xlink:href="#textcircle" aria-label="With Love for the Webflow Communit" textlength="900">With Love for the Webflow Community</textpath>
+              </text>
+            </svg></div>
+          <div class="w-embed"><svg class="wf" viewbox="0 0 213 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+              <g transform="matrix(1,0,0,1,-103.2,-131.1)">
+                <path d="M261,174.3C261,174.3 243.7,228.5 242.4,233.1C241.9,228.5 229.3,131.1 229.3,131.1C199.8,131.1 184.1,152 175.8,174.3C175.8,174.3 154.8,228.7 153.1,233.3C153,229 149.9,174.9 149.9,174.9C148.1,147.7 123.3,131.2 103.2,131.2L127.4,278.8C158.3,278.7 174.9,257.8 183.6,235.6C183.6,235.6 202.1,187.6 202.9,185.4C203.1,187.5 216.2,278.8 216.2,278.8C247.1,278.8 263.8,259.2 272.8,237.8L316,131.1C285.4,131.1 269.3,152 261,174.3Z" style="fill:currentColor;fill-rule:nonzero;"></path>
+              </g>
+            </svg></div>
+        </div>
+        <div class="subline"><span>inspired by Codrops - rebuilt for Webflow Community</span></div>
+        <div class="heading-wrap">
+          <h1 class="animate-this-shit">20 CSS Button Hover Styles</h1>
+        </div>
+        <div class="hero-p-wrapper">
+          <p>Feel free to use the buttons below for your projects and have fun with them as they were fun to build. To recreate the hovers you will need the <span class="blue-dot">🔵</span> custom code found above each button.</p>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="container-4">
+        <div class="all-buttons-use-this w-embed">
+          <style>
+.btn {
+	pointer-events: auto;
+	font-family: inherit;
+	font-size: inherit;
+}
+.btn::before,
+.btn::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+        </div>
+        <ul role="list" class="content w-list-unstyled">
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-one div {
+	position: relative;
+	mix-blend-mode: difference;
+}
+.btn-one::before {
+	content: '';
+	background: blue;
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-one:hover::before {
+	transform: translate3d(0,-100%,0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-one w-inline-block">
+              <div><span>Upload</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-two {
+	padding: 1rem 1.5rem;
+	border: 1px solid #000;
+	overflow: hidden;
+	color: #fff;
+}
+.btn-two span {
+	display: block;
+	position: relative;
+}
+.btn-two > span {
+	overflow: hidden;
+}
+.btn-two > .btn-two-span > span {
+	overflow: hidden;
+	mix-blend-mode: difference;
+}
+.btn-two:hover > .btn-two-span > span {
+	animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+@keyframes MoveUpInitial {
+	to {
+		transform: translate3d(0,-105%,0);
+	}
+}
+@keyframes MoveUpEnd {
+	from {
+		transform: translate3d(0,100%,0);
+	}
+	to {
+		transform: translate3d(0,0,0);
+	}
+}
+.btn-two::before {
+	content: '';
+	background: blue;
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+	transform-origin: 100% 50%;
+}
+.btn-two:hover::before {
+	transform: scale3d(0,1,1);
+	transform-origin: 0% 50%;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-two w-inline-block">
+              <div class="btn-two-span"><span>New Page</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-three span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+.btn-three::before {
+	content: '';
+	background: blue;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.btn-three:hover::before {
+	transform: translate3d(100%,0,0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-three w-inline-block">
+              <div><span>Render</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-four .btn-text {
+	display: inline-block;
+}
+.btn-four:hover .btn-text {
+	opacity: 0;
+}
+.marquee {
+	pointer-events: none;
+}
+.marquee-inner {
+	width: fit-content;
+	display: flex;
+	--offset: 1rem;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 1s linear infinite;
+	animation-play-state: paused;
+}
+.btn-four:hover .marquee-inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+.marquee span {
+	text-align: center;
+	white-space: nowrap;
+	font-style: italic;
+	padding: 1.5rem 0.5rem;
+}
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--move-initial), 0, 0);
+	}
+	100% {
+		transform: translate3d(var(--move-final), 0, 0);
+	}
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-four w-inline-block">
+              <div><span class="btn-text">Subscribe</span></div>
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <div><span>Subscribe</span></div>
+                  <div><span>Subscribe</span></div>
+                  <div><span>Subscribe</span></div>
+                  <div><span>Subscribe</span></div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-five {
+	border-radius: 50%;
+}
+.btn-five .btn-text {
+	display: inline-block;
+	transition: opacity 0.1s;
+}
+.btn-five:hover .btn-text {
+	opacity: 0;
+}
+.btn-five:hover .marquee--inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.6s;
+}
+.marquee {
+	pointer-events: none;
+}
+.marquee-inner {
+	width: fit-content;
+	display: flex;
+	--offset: 1rem;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 1s linear infinite;
+	animation-play-state: paused;
+}
+.btn-five .marquee {
+	transform: rotate(-2.75deg);
+}
+.btn-five:hover .marquee-inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+.marquee span {
+	text-align: center;
+	white-space: nowrap;
+	font-style: italic;
+	padding: 1.5rem 0.5rem;
+}
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--move-initial), 0, 0);
+	}
+	100% {
+		transform: translate3d(var(--move-final), 0, 0);
+	}
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-five w-inline-block">
+              <div><span class="btn-text">Send Love</span></div>
+              <div class="marquee">
+                <div class="marquee-inner">
+                  <div><span>Send Love</span></div>
+                  <div><span>Send Love</span></div>
+                  <div><span>Send Love</span></div>
+                  <div><span>Send Love</span></div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-six {
+	padding: 0;
+	border-radius: 5px;
+}
+.btn-six span {
+	display: block;
+	background: blue;
+	padding: 1.5rem 2rem;
+	border: 1px solid #000;
+	border-radius: 5px;
+	transform: translate3d(-4px, -4px, 0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-six:hover span {
+	transform: translate3d(-8px, -8px, 0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-six w-inline-block">
+              <div><span class="btn-text">Activate Card</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-seven {
+	width: 175px;
+	height: 120px;
+	color: white;
+}
+.btn-seven::before {
+	content: '';
+	background: blue;
+	-webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+}
+.btn-seven:hover::before {
+	background: white;
+	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+}
+.btn-seven::after {
+	content: '';
+	height: 86%;
+	width: 97%;
+	top: 5%;
+	border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+	border: 1px solid white;
+	transform: rotate(-20deg);
+	z-index: -1;
+	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+.btn-seven:hover::after {
+	transform: translate3d(0,-5px,0);
+}
+.btn-seven span {
+	display: block;
+	transition: transform 0.3s ease;
+	mix-blend-mode: difference;
+}
+.btn-seven:hover span {
+	transform: translate3d(0,-10px,0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-seven w-inline-block">
+              <div><span>Reshape</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-eight::before {
+	content: '';
+	background: blue;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+.btn-eight:hover::before {
+	background: blue;
+	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.btn-eight span {
+	display: block;
+	mix-blend-mode: difference;
+	transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+.btn-eight:hover span {
+	transform: translate3d(-10px,0,0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-eight w-inline-block">
+              <div><span>Initialize</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-nine {
+	border-radius: 0.5rem;
+	border: 2px solid white;
+	box-shadow: inset 0 0 0 0px white;
+	transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-nine:hover {
+	color: blue;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 40px white;
+	transition-delay: 0s, 0s, 0.2s;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-nine w-inline-block">
+              <div>Hide Details</div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-ten .btn-text {
+	display: block;
+	position: relative;
+	z-index: 1;
+  overflow: hidden;
+}
+.btn-ten span {
+	display: block;
+	position: relative;
+	z-index: 1;
+	color: white;
+}
+.btn-ten > span {
+	overflow: hidden;
+}
+.btn-ten:hover > div > span {
+	color: blue;
+	animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
+}
+@keyframes MoveRightInitial {
+	to {
+		transform: translate3d(105%,0,0);
+	}
+}
+@keyframes MoveRightEnd {
+	from {
+		transform: translate3d(-100%,0,0);
+	}
+	to {
+		transform: translate3d(0,0,0);
+	}
+}
+.btn-ten::before,
+.btn-ten::after {
+	content: '';
+	background: white;
+}
+.btn-ten::before {
+	width: 135%;
+	-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	transform: translate3d(-100%,0,0);
+}
+.btn-ten:hover::before {
+	transform: translate3d(0,0,0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-ten::after {
+	width: 105%;
+	transform: translate3d(100%,0,0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-ten:hover::after {
+	transform: translate3d(0,0,0);
+	transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-ten w-inline-block">
+              <div class="btn-text"><span>Verify</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-eleven span {
+	display: block;
+	position: relative;
+	mix-blend-mode: difference;
+	z-index: 10;
+}
+.btn-eleven:hover span {
+	animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+@keyframes MoveScaleUpInitial {
+	to {
+		transform: translate3d(0,-105%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+}
+@keyframes MoveScaleUpEnd {
+	from {
+		transform: translate3d(0,100%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+.btn-eleven::before {
+	content: '';
+	background: blue;
+	width: 120%;
+	height: 0;
+	padding-bottom: 120%;
+	top: -110%;
+	left: -10%;
+	border-radius: 50%;
+	transform: translate3d(0,68%,0) scale3d(0,0,0);
+}
+.btn-eleven:hover::before {
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+.btn-eleven::after {
+	content: '';
+	background: blue;
+	transform: translate3d(0,-100%,0);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+.btn-eleven:hover::after {
+	transform: translate3d(0,0,0);
+	transition-duration: 0.05s;
+	transition-delay: 0.4s;
+	transition-timing-function: linear;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-eleven w-inline-block">
+              <div><span>Export File</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-twelve .btn-text {
+	display: block;
+	position: relative;
+	z-index: 1;
+  overflow: hidden;
+}
+.btn-twelve span {
+	overflow: hidden;
+	display: block;
+	position: relative;
+  color: white;
+}
+.btn-twelve:hover > div > span {
+	animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+  color: blue;
+}
+.btn-twelve::before {
+	content: '';
+	background: blue;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 50%;
+	transform: translate3d(0,0,0);
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-twelve:hover::before {
+	transform: translate3d(0,100%,0);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-twelve w-inline-block">
+              <div class="btn-text"><span>Add</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-thirteen span {
+	display: block;
+	position: relative;
+}
+.btn-thirteen > span {
+	overflow: hidden;
+	mix-blend-mode: difference;
+}
+.btn-thirteen:hover > div > span {
+	animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+  color: blue
+}
+.btn-thirteen::before {
+	content: '';
+	background: blue;
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 100%;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	transition: clip-path 0.2s, -webkit-clip-path 0.2s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-thirteen:hover::before {
+	transition-duration: 0.3s;
+	-webkit-clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-thirteen w-inline-block">
+              <div class="btn-text"><span>Next</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-fourteen span {
+	display: inline-block;
+	position: relative;
+  z-index: 1;
+	color: white;
+}
+.btn-fourteen::before {
+	content: '';
+	background: blue;
+	transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+}
+.btn-fourteen:hover::before {
+	transform: scale3d(0.9, 0.8, 1);
+}
+.btn-fourteen::after {
+	content: '';
+	border: 1px solid blue;
+	transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+	border-radius: 0px;
+	transform: scale3d(0.85, 0.65, 1);
+}
+.btn-fourteen:hover::after {
+	transform: scale3d(1,1,1);
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-fourteen w-inline-block">
+              <div><span>Next</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-fifteen::before {
+	content: '';
+	top: 10px;
+	left: 10px;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	background: rgba(0,0,255,0.5);
+	filter: blur(7px);
+	border-radius: 7px;
+	z-index: -1;
+	transform: translate3d(0,15px,0);
+	transition: transform 0.45s;
+}
+.btn-fifteen:hover::before {
+	transform: translate3d(0,0,0);
+}
+.btn-fifteen .btn-text {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	line-height: 4rem;
+}
+.btn-fifteen span {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	line-height: 4rem;
+}
+.btn-fifteen:hover span {
+	animation: slotMachine 0.15s ease-out forwards 3;
+}
+@keyframes slotMachine {
+	50% {
+		transform: translate3d(0,100%,0);
+		opacity: 0;
+	}
+	51% {
+		transform: translate3d(0,-100%,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-fifteen w-inline-block">
+              <div class="btn-text"><span>Sell</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-sixteen::before {
+	content: '';
+	z-index: -1;
+	background: #e7e7e7;
+	-webkit-clip-path: polygon(20% 30%, 0 30%, 0 50%, 0 70%, 20% 70%, 50% 70%, 80% 70%, 100% 70%, 100% 50%, 100% 30%, 80% 30%, 50% 30%);
+	clip-path: polygon(20% 30%, 0 30%, 0 50%, 0 70%, 20% 70%, 50% 70%, 80% 70%, 100% 70%, 100% 50%, 100% 30%, 80% 30%, 50% 30%);
+	transition: clip-path 0.4s cubic-bezier(0.3, 1, 0.2, 1), -webkit-clip-path 0.4s cubic-bezier(0.3, 1, 0.2, 1), transform 0.4s cubic-bezier(0.3, 1, 0.2, 1), background 0.4s ease;
+}
+.btn-sixteen:hover::before {
+	background: blue;
+	transform: scale3d(0.7,0.7,1);
+	-webkit-clip-path: polygon(30% 10%, 10% 30%, 30% 50%, 10% 70%, 30% 90%, 50% 70%, 70% 90%, 90% 70%, 70% 50%, 90% 30%, 70% 10%, 50% 30%);
+	clip-path: polygon(30% 10%, 10% 30%, 30% 50%, 10% 70%, 30% 90%, 50% 70%, 70% 90%, 90% 70%, 70% 50%, 90% 30%, 70% 10%, 50% 30%);
+}
+.btn-sixteen span {
+	display: block;
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.2, 1), opacity 0.05s;
+}
+.btn-sixteen:hover span {
+	transform: scale3d(0.1,0.1,1);
+	opacity: 0;
+	transition-delay: 0s, 0.35s;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-sixteen w-inline-block">
+              <div><span>Delete</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-seventeen::before {
+	content: '';
+	z-index: 0;
+	background: blue;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 85% 70%, 80% 70%, 75% 70%, 0 70%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 85% 70%, 80% 70%, 75% 70%, 0 70%);
+	transition: clip-path 0.3s cubic-bezier(0.7, 0, 0.2, 1), -webkit-clip-path 0.3s cubic-bezier(0.7, 0, 0.2, 1), transform 0.3s ease;
+}
+.btn-seventeen:hover::before {
+	transform: translate3d(0,-10px,0);
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 85% 70%, 86% 100%, 75% 70%, 0 70%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 85% 70%, 86% 100%, 75% 70%, 0 70%);
+}
+.btn-seventeen span {
+	display: block;
+	position: relative;
+}
+.btn-seventeen .btn-text {
+	display: block;
+	position: relative;
+	transition: transform 0.3s;
+	transform: translate3d(0,-0.556rem,0);
+	z-index: 1;
+	overflow: hidden;
+}
+.btn-seventeen:hover .btn-text {
+	transform: translate3d(0,-1.111rem,0);
+}
+.btn-seventeen:hover span {
+	animation: MoveUpInitial 0.15s forwards, MoveUpEnd 0.15s forwards 0.15s;
+}
+@keyframes MoveUpInitial {
+	to {
+		transform: translate3d(0,-105%,0);
+	}
+}
+@keyframes MoveUpEnd {
+	from {
+		transform: translate3d(0,100%,0);
+	}
+	to {
+		transform: translate3d(0,0,0);
+	}
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-seventeen w-inline-block">
+              <div class="btn-text"><span>Let&#x27;s Chat</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-eighteen .button__bg {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #e7e7e7;
+	border-radius: 0.85rem;
+	overflow: hidden;
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+.btn-eighteen:hover .button__bg {
+	transform: scale3d(1.2,1.2,1);
+}
+.btn-eighteen .button__bg::before,
+.btn-eighteen .button__bg::after {
+	content: '';
+	position: absolute;
+	background: blue;
+}
+.btn-eighteen .button__bg::before {
+	width: 110%;
+	height: 0;
+	padding-bottom: 110%;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+}
+.btn-eighteen:hover .button__bg::before {
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+	transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+}
+.btn-eighteen .button__bg::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.btn-eighteen:hover .button__bg::after {
+	opacity: 1;
+	transition-duration: 0.01s;
+	transition-delay: 0.3s;
+}
+.btn-eighteen span {
+	display: block;
+	position: relative;
+	padding: 1.5rem 3rem;
+	mix-blend-mode: difference;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-eighteen w-inline-block">
+              <div class="button__bg"></div>
+              <div><span>Let&#x27;s Chat</span></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-nineteen {
+	-webkit-clip-path: circle(40% at 50% 50%);
+	clip-path: circle(40% at 50% 50%);
+}
+.btn-nineteen:focus-visible {
+	background: #443ffc;
+}
+.textcircle {
+	position: relative;
+	display: block;
+	width: 200px;
+}
+.textcircle text {
+	font-size: 32px;
+	text-transform: uppercase;
+	fill: black;
+}
+.textcircle textPath {
+	letter-spacing: 17px; /* Firefox needs this */
+}
+.btn-nineteen:hover .textcircle {
+	animation: rotateIt 7s linear infinite;
+}
+.eye {
+	position: absolute;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	top: calc(50% - 30px);
+	left: calc(50% - 30px);
+}
+.eye__outer,
+.eye__inner,
+.eye__lashes-up,
+.eye__lashes-down {
+	stroke: black;
+	fill: none;
+	stroke-width: 1.5px;
+}
+.eye__lashes-down {
+	opacity: 0;
+}
+.btn-nineteen:hover .eye__lashes-up,
+.btn-nineteen:hover .eye__inner,
+.btn-nineteen:hover .eye__iris {
+	animation: blinkHide 2s step-end infinite;
+}
+.btn-nineteen:hover .eye__lashes-down {
+	animation: blinkShow 2s step-end infinite;
+}
+@keyframes blinkHide {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+}
+@keyframes blinkShow {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+}
+@keyframes rotateIt {
+  to {
+	transform: rotate(-360deg);
+  }
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-nineteen w-inline-block">
+              <div class="w-embed"><svg class="textcircle" viewbox="0 0 500 500">
+                  <title>Projects & client work 2020</title>
+                  <defs>
+                    <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
+                  </defs>
+                  <text>
+                    <textpath xlink:href="#textcircle" aria-label="Projects & client work 2021" textlength="900">Projects &amp; client work 2021</textpath>
+                  </text>
+                </svg></div>
+              <div class="w-embed"><svg aria-hidden="true" class="eye" width="70" height="70" viewbox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+                  <path class="eye__outer" d="M10.5 35.308c5.227-7.98 14.248-13.252 24.5-13.252s19.273 5.271 24.5 13.252c-5.227 7.98-14.248 13.253-24.5 13.253s-19.273-5.272-24.5-13.253z"></path>
+                  <path class="eye__lashes-up" d="M35 8.802v8.836M49.537 11.383l-3.31 8.192M20.522 11.684l3.31 8.192"></path>
+                  <path class="eye__lashes-down" d="M35 61.818v-8.836 8.836zM49.537 59.237l-3.31-8.193 3.31 8.193zM20.522 58.936l3.31-8.193-3.31 8.193z"></path>
+                  <circle class="eye__iris" cx="35" cy="35.31" r="5.221"></circle>
+                  <circle class="eye__inner" cx="35" cy="35.31" r="10.041"></circle>
+                </svg></div>
+            </a>
+          </li>
+          <li class="content-item">
+            <div class="custom-css w-embed">
+              <style>
+.btn-twenty {
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+}
+.progress {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top: calc(50% - 40px);
+	left: calc(50% - 40px);
+	transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.btn-twenty:hover .progress {
+	transform: scale3d(1.2, 1.2, 1);
+}
+.progress__circle,
+.progress__path {
+	fill: none;
+	stroke: rgba(0,0,0,0.4);
+	stroke-width: 1px;
+}
+.btn-twenty:focus-visible .progress__circle {
+	fill: rgba(0,0,0,0.4);
+}
+.progress__path {
+	stroke: blue;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.btn-twenty:hover .progress__path {
+	stroke-dashoffset: 0;
+}
+</style>
+            </div>
+            <a href="#" class="btn-3 btn-twenty w-inline-block">
+              <div class="w-embed"><svg aria-hidden="true" class="progress" width="70" height="70" viewbox="0 0 70 70">
+                  <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path>
+                  <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathlength="1"></path>
+                </svg></div>
+              <div><span>Go</span></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <div class="footer-2">
+      <div class="footer-nav-holder">
+        <ul role="list" class="nav-item-list w-list-unstyled">
+          <li class="in--footer">
+            <a href="https://webflow.com/website/vibrand-css-button-hover-styles?s=vibrand-css-button-hover-styles" class="nav-item-link w-inline-block">
+              <div><span>Clone this Project</span></div>
+              <div class="nav-link-icon w-embed"><svg aria-hidden="true" focusable="false" width="100%" height="100%" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+                  <path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z" style="fill:currentColor;"></path>
+                </svg></div>
+            </a>
+          </li>
+          <li class="in--footer">
+            <a href="https://preview.webflow.com/preview/vibrand-css-button-hover-styles?utm_medium=preview_link&amp;utm_source=designer&amp;utm_content=vibrand-css-button-hover-styles&amp;preview=758e81375414bc258a4cf735e3eb0788&amp;mode=preview" target="_blank" class="nav-item-link w-inline-block">
+              <div><span>Preview Mode</span></div>
+              <div class="nav-link-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 213 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                  <g transform="matrix(1,0,0,1,-103.2,-131.1)">
+                    <path d="M261,174.3C261,174.3 243.7,228.5 242.4,233.1C241.9,228.5 229.3,131.1 229.3,131.1C199.8,131.1 184.1,152 175.8,174.3C175.8,174.3 154.8,228.7 153.1,233.3C153,229 149.9,174.9 149.9,174.9C148.1,147.7 123.3,131.2 103.2,131.2L127.4,278.8C158.3,278.7 174.9,257.8 183.6,235.6C183.6,235.6 202.1,187.6 202.9,185.4C203.1,187.5 216.2,278.8 216.2,278.8C247.1,278.8 263.8,259.2 272.8,237.8L316,131.1C285.4,131.1 269.3,152 261,174.3Z" style="fill:currentColor;fill-rule:nonzero;"></path>
+                  </g>
+                </svg></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="container-4 is--footer">
+        <div class="subline ontop"><span>Want more?</span></div>
+        <h2>So tell us what you want, <span class="db mobile-db">what you really, really want.</span></h2>
+        <div class="p-wrapper">
+          <p>You want some components or layouts that you are not able to build yourself? We are here to help. <br><span class="db">Just tell us what you would like and we will build it for the community.</span></p>
+        </div>
+        <div class="form-block-2 w-form">
+          <form id="email-form" name="email-form" data-name="Email Form" action="https://assets.vibranddesign.com/wf-components/formmail.php" method="post" class="form-2" data-wf-page-id="681e28248afa9f048c16624c" data-wf-element-id="f165aba5-346e-306b-f133-529de685a268">
+            <div class="form-field-col">
+              <div class="w-embed"><input type="hidden" name="recipients" value="community&george@assets.vibranddesign.com">
+                <input type="hidden" name="good_url" value="https://vibrand-css-button-hover-styles.webflow.io/message-send">
+                <input type="hidden" name="subject" value="Component Submit - 20 CSS Buttons Hover Styles">
+                <input type="hidden" name="email" value="anonym@webflow-components.com">
+                <input type="hidden" name="mail_options" value="HTMLTemplate=formtemplate.html,TemplateMissing=N/A">
+              </div><textarea id="idea" name="idea" maxlength="5000" data-name="Idea" placeholder="Tell us what type of component you want..." required="" class="textarea w-input"></textarea>
+            </div>
+            <div class="submit-wrapper"><input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit">
+              <div class="btn-3 submit">
+                <div class="w-embed"><svg class="textcircle" viewbox="0 0 500 500">
+                    <title>submit submit submit submit</title>
+                    <defs>
+                      <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
+                    </defs>
+                    <text>
+                      <textpath xlink:href="#textcircle" aria-label="submit submit submit submit" textlength="900">submit submit submit submit</textpath>
+                    </text>
+                  </svg></div>
+                <div class="w-embed"><svg aria-hidden="true" class="rocket" width="40" height="40" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M368.05829,88.0293a55.99512,55.99512,0,1,0,55.99215,55.99414A56.01694,56.01694,0,0,0,368.05829,88.0293Zm0,79.99218a23.998,23.998,0,1,1,23.99608-23.998A24.02247,24.02247,0,0,1,368.05829,168.02148ZM505.1656,19.29492C503.98982,13.832,498.18123,8.0293,492.71835,6.86133,460.63244,0,435.48793,0,410.45084,0,307.26342,0,245.38261,55.19727,199.18734,127.98828H95.01555c-16.293,0-35.58786,11.92188-42.87692,26.4961L2.73242,253.27344A28.4,28.4,0,0,0,.2168,263.97656a24.00493,24.00493,0,0,0,23.99607,23.998H128.13466a95.98845,95.98845,0,0,1,95.98625,95.99023V487.95508a24.00243,24.00243,0,0,0,23.99608,23.998,28.53884,28.53884,0,0,0,10.70116-2.51562l98.71671-49.40039c14.55663-7.28516,26.46678-26.5625,26.46678-42.83984V312.76758C456.568,266.46094,511.982,204.37109,511.982,101.69336,512.0738,76.54492,512.0738,51.39648,505.1656,19.29492ZM37.15427,255.97656l43.60152-87.18164c1.85156-3.70508,10.11523-8.81054,14.25976-8.81054h85.08c-13.93554,28.06054-31.71287,63.99609-47.55465,95.99218l.0664.45313C131.08778,256.377,61.01753,255.97656,37.15427,255.97656Zm314.8513,161.22071c0,4.13085-5.09179,12.375-8.789,14.22461L256.115,475.01172c0-23.90234-.4043-94.06055-.46094-95.60938l.36719.04688c31.99606-15.82617,67.80267-33.58984,95.85929-47.541l.125.002Zm-102.078-70.51368a127.62739,127.62739,0,0,0-84.6347-84.55468c52.02731-103.98633,99.76945-230.13282,245.158-230.13282,21.164,0,41.29684,0,65.41987,4.1875,4.26562,24.377,4.1914,44.38477,4.11523,65.50977C479.98594,246.66406,353.00752,295.1543,249.92753,346.68359Zm-147.494-26.71289C54.35347,319.9707,2.03125,359.31836.168,480H0v32H32v-.23242C203.617,508.42969,216.8885,396.74414,165.80065,345.40039,150.85925,330.38477,127.22255,319.9707,102.43351,319.9707Zm52.914,109.39844c-12.83593,31.14844-57.63667,49.42969-123.36709,50.55078.06446-3.55469-1.11914-127.88867,70.45307-127.88867,15.09569,0,31.11521,6.29492,40.81051,16.03906C156.05456,380.94336,164.6483,406.80273,155.34753,429.36914Z"></path>
+                  </svg></div>
+              </div>
+            </div>
+          </form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container-4 is--footer-bottom">
+          <a href="https://www.vibranddesign.com/" target="_blank" class="footer-bottom-link w-inline-block">
+            <div><span>Created with</span> <span class="heart">❤</span> <span>by Vibrand Design</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=681d249aaf15c0818bb90f1e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+</body>
+</html>
