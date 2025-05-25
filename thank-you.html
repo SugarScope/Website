@@ -1,10 +1,10 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Sun May 25 2025 21:52:26 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="681d249baf15c0818bb90fb3" data-wf-site="681d249aaf15c0818bb90f1e" lang="en">
+<html data-wf-page="68310cf6b7590120b7785981" data-wf-site="681d249aaf15c0818bb90f1e" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Contact</title>
-  <meta content="Contact" property="og:title">
-  <meta content="Contact" property="twitter:title">
+  <title>Confirmation</title>
+  <meta content="Confirmation" property="og:title">
+  <meta content="Confirmation" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -43,92 +43,44 @@
             <p class="paragraph-18">Stay in touch and get updates on exciting SugarScope updates. </p>
             <div class="contact-list">
               <div class="contact-divider-line"></div>
-              <div id="w-node-f2f1c1ab-51ee-c78c-85d4-0a53924122fb-8bb90fb3" class="contact-list-item">
+              <div id="w-node-f2f1c1ab-51ee-c78c-85d4-0a53924122fb-b7785981" class="contact-list-item">
                 <div class="contact-list-icon-wrapper">
                   <div class="contact-list-icon w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg></div>
                 </div>
-                <a href="mailto:sugarscope.team@gmail.com" class="contact-links">sugarscope.team@gmail.com</a>
+                <a href="mailto:sugarscope@gmail.com" class="contact-links">sugarscopechat@gmail.com</a>
               </div>
               <div class="contact-divider-line"></div>
             </div>
           </div>
-          <div class="code-embed w-embed w-script">
+          <div class="w-embed">
             <style>
-  .newsletter-form {
+  .confirmation-box {
     background-color: #000;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 16px;
     max-width: 500px;
     margin: auto;
     color: #fff;
     font-family: sans-serif;
   }
-  .newsletter-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  .confirmation-box h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
-  .newsletter-form input[type="text"],
-  .newsletter-form input[type="email"] {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-bottom: 1px solid #aaa;
-    background-color: #000;
-    color: #fff;
-    font-size: 1rem;
-  }
-  .newsletter-form input::placeholder {
-    color: #aaa;
-  }
-  .newsletter-form button {
-    background-color: transparent;
-    border: 2px solid #aaa;
-    padding: 0.75rem 1.5rem;
-    color: #00f5d4;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
-  .newsletter-form button:hover {
-    background-color: #00f5d4;
-    color: #000;
-    border-color: #00f5d4;
+  .confirmation-box p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #ddd;
   }
 </style>
-            <form class="newsletter-form" id="newsletterForm">
-              <label for="name">Name *</label>
-              <input type="text" name="name" id="name" placeholder="Your name" required="">
-              <label for="email">Email Address *</label>
-              <input type="email" name="email" id="email" placeholder="Email address" required="">
-              <button type="submit">JOIN OUR NEWSLETTER</button>
-            </form>
-            <script>
-  document.getElementById("newsletterForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    fetch("https://hooks.zapier.com/hooks/catch/23062856/2j17oa5/", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        window.location.href = "thank-you.html";
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    })
-    .catch(() => {
-      alert("Error submitting the form.");
-    });
-  });
-</script>
+            <div class="confirmation-box">
+              <h1>Thanks for signing up!</h1>
+              <p>You’re officially in the loop. We’ll be in touch soon.</p>
+            </div>
           </div>
         </div>
       </div>
